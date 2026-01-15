@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: quikapp-moderation-service
+    container_name: quckapp-moderation-service
     ports:
       - "5014:5014"
     environment:
@@ -14,7 +14,7 @@ services:
       - DB_PORT=3306
       - DB_USER=root
       - DB_PASSWORD=password
-      - DB_NAME=quikapp_moderation
+      - DB_NAME=quckapp_moderation
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     depends_on:
@@ -23,17 +23,17 @@ services:
       redis:
         condition: service_started
     networks:
-      - quikapp-network
+      - quckapp-network
     restart: unless-stopped
 
   mysql:
     image: mysql:8.0
-    container_name: quikapp-moderation-mysql
+    container_name: quckapp-moderation-mysql
     ports:
       - "3312:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=quikapp_moderation
+      - MYSQL_DATABASE=quckapp_moderation
     volumes:
       - moderation-mysql-data:/var/lib/mysql
     healthcheck:
@@ -42,19 +42,19 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - quikapp-network
+      - quckapp-network
 
   redis:
     image: redis:7-alpine
-    container_name: quikapp-moderation-redis
+    container_name: quckapp-moderation-redis
     ports:
       - "6385:6379"
     networks:
-      - quikapp-network
+      - quckapp-network
 
 volumes:
   moderation-mysql-data:
 
 networks:
-  quikapp-network:
+  quckapp-network:
     driver: bridge

@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     DB_PORT: int = 3306
     DB_USER: str = "root"
     DB_PASSWORD: str = "password"
-    DB_NAME: str = "quikapp_moderation"
+    DB_NAME: str = "quckapp_moderation"
 
     # Redis
     REDIS_HOST: str = "localhost"

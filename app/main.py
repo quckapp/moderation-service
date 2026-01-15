@@ -20,7 +20,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Moderation Service",
-    description="QuikApp Content Moderation and Safety Service",
+    description="QuckApp Content Moderation and Safety Service",
     version="1.0.0",
     lifespan=lifespan,
 )
