@@ -6,7 +6,7 @@ sqlalchemy==2.0.25
 pymysql==1.1.0
 redis==5.0.1
 httpx==0.26.0
-python-multipart==0.0.6
+python-multipart==0.0.22
 transformers==4.36.2
 torch==2.1.2
 better-profanity==0.7.0
