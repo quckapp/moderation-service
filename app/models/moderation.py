@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Text, Boolean, Float, DateTime, Enum, JSON
+from sqlalchemy import Column, String, Text, Boolean, Float, Integer, DateTime, Enum, JSON
 from sqlalchemy.dialects.mysql import CHAR
 from datetime import datetime
 import uuid
@@ -51,5 +51,3 @@ class ModerationRule(Base):
     priority = Column(Integer, default=0)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-
-from sqlalchemy import Integer
