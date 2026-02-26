@@ -35,8 +35,8 @@ app.add_middleware(
 
 # Include routers
 app.include_router(health.router, tags=["Health"])
-app.include_router(moderation.router, prefix="/api/moderation", tags=["Moderation"])
-app.include_router(rules.router, prefix="/api/moderation/rules", tags=["Rules"])
+app.include_router(moderation.router, prefix="/api/v1/moderation", tags=["Moderation"])
+app.include_router(rules.router, prefix="/api/v1/moderation/rules", tags=["Rules"])
 
 if __name__ == "__main__":
     import uvicorn
