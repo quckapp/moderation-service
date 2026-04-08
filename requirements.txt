@@ -7,7 +7,7 @@ pymysql==1.1.0
 redis==5.0.1
 httpx==0.26.0
 python-multipart==0.0.6
-transformers==4.36.2
+transformers==5.0.0rc3
 torch==2.1.2
 better-profanity==0.7.0
 cryptography==41.0.7
